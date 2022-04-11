@@ -1,4 +1,4 @@
-import { UnresolvedTrack, UnresolvedQuery } from "erela.js";
+import { UnresolvedTrack, UnresolvedQuery } from "@phamleduy04/erela.js";
 export interface ExternalUrls {
     spotify: string;
 }

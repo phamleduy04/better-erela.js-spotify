@@ -1,4 +1,4 @@
-import { Manager, Plugin } from "erela.js";
+import { Manager, Plugin } from "@phamleduy04/erela.js";
 import resolver from "./resolver";
 import { SpotifyOptions } from "./typings";
 export declare class Spotify extends Plugin {

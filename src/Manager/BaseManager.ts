@@ -1,4 +1,5 @@
-import { LoadType, SearchResult, Track, TrackUtils, UnresolvedTrack } from "erela.js";
+// @ts-ignore
+import { LoadType, SearchResult, Track, TrackUtils, UnresolvedTrack } from "@phamleduy04/erela.js";
 import resolver from "../resolver";
 import { SpotifyTrack } from "../typings";
 import { SpotifyEpisode } from "./Episode";

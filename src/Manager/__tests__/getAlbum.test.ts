@@ -1,4 +1,4 @@
-import { Manager } from "erela.js";
+import { Manager } from "@phamleduy04/erela.js";
 import { Spotify } from "../../plugin";
 
 jest.setTimeout(60000);

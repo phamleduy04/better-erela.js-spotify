@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BaseManager = void 0;
-const erela_js_1 = require("erela.js");
+// @ts-ignore
+const erela_js_1 = require("@phamleduy04/erela.js");
 class BaseManager {
     constructor(resolver) {
         this.resolver = resolver;

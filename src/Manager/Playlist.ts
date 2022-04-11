@@ -1,4 +1,5 @@
-import { SearchResult, TrackUtils } from "erela.js";
+// @ts-ignore
+import { SearchResult, TrackUtils } from "@phamleduy04/erela.js";
 import { SpotifyTrack } from "../typings";
 import { BaseManager } from "./BaseManager";
 

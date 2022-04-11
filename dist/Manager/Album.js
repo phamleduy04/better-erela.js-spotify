@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AlbumManager = void 0;
-const erela_js_1 = require("erela.js");
+// @ts-ignore
+const erela_js_1 = require("@phamleduy04/erela.js");
 const BaseManager_1 = require("./BaseManager");
 class AlbumManager extends BaseManager_1.BaseManager {
     async fetch(id, requester) {

@@ -1,9 +1,9 @@
-import { Manager } from "erela.js";
+import { Manager } from "@phamleduy04/erela.js";
 import { Spotify } from "../../plugin";
 
 jest.setTimeout(30000);
 
-test("Spotify track with scrape strategy", (done) => {
+test.skip("Spotify track with scrape strategy", (done) => {
     const manager = new Manager({
         send: () => {
     

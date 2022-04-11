@@ -1,9 +1,5 @@
-import {
-    Manager,
-    Plugin,
-    SearchQuery,
-    SearchResult
-} from "erela.js";
+// @ts-ignore
+import { Manager, Plugin, SearchQuery, SearchResult } from "@phamleduy04/erela.js";
 import resolver from "./resolver";
 import { SpotifyOptions } from "./typings";
 

@@ -1,4 +1,4 @@
-import { SearchResult } from "erela.js";
+import { SearchResult } from "@phamleduy04/erela.js";
 import { BaseManager } from "./BaseManager";
 import { SpotifyEpisode } from "./Episode";
 export declare class ShowManager extends BaseManager {

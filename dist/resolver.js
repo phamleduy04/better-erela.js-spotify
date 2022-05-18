@@ -20,26 +20,26 @@ class resolver {
         try {
             if (!this.token)
                 await this.renew();
-            const req = await (0, undici_1.fetch)(endpoint.startsWith("http") ? endpoint : `${this.BASE_URL}${endpoint.startsWith("/") ? endpoint : `/${endpoint}`}`, { headers: { Authorization: this.token } });
-            if ([401].includes(req.status)) {
+            const req = await (0, undici_1.request)(endpoint.startsWith("http") ? endpoint : `${this.BASE_URL}${endpoint.startsWith("/") ? endpoint : `/${endpoint}`}`, { headers: { Authorization: this.token } });
+            if ([401].includes(req.statusCode)) {
                 await this.renew();
                 return await this.makeRequest(endpoint);
             }
-            return await req.json();
+            return await req.body.json();
         }
-        catch (_e) {
+        catch {
             return null;
         }
     }
     async getToken() {
-        const response = await (0, undici_1.fetch)("https://accounts.spotify.com/api/token?grant_type=client_credentials", {
+        const response = await (0, undici_1.request)("https://accounts.spotify.com/api/token?grant_type=client_credentials", {
             method: "POST",
             headers: {
                 Authorization: `Basic ${Buffer.from(`${this.plugin.options.clientID ?? this.plugin.options.clientId}:${this.plugin.options.clientSecret}`).toString("base64")}`,
                 "Content-Type": "application/x-www-form-urlencoded"
             }
         });
-        const { access_token, expires_in } = await response.json();
+        const { access_token, expires_in } = await response.body.json();
         if (!access_token) {
             throw new Error("Invalid Spotify client.");
         }
@@ -47,8 +47,8 @@ class resolver {
         return expires_in * 1000;
     }
     async fetchAccessToken() {
-        const response = await (0, undici_1.fetch)("https://open.spotify.com/get_access_token", { headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59", referer: "https://open.spotify.com" } });
-        const { accessToken, accessTokenExpirationTimestampMs } = await response.json();
+        const response = await (0, undici_1.request)("https://open.spotify.com/get_access_token", { headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59", referer: "https://open.spotify.com" } });
+        const { accessToken, accessTokenExpirationTimestampMs } = await response.body.json();
         if (!accessToken)
             throw new Error("Could not fetch self spotify token.");
         this.token = `Bearer ${accessToken}`;

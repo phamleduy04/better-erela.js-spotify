@@ -5,7 +5,7 @@ specifiers:
   '@babel/preset-env': 7.17.12
   '@babel/preset-typescript': 7.17.12
   '@hazmi35/eslint-config': 8.3.0
-  '@phamleduy04/erela.js': latest
+  '@phamleduy04/erela.js': ^2.3.27
   '@types/jest': 27.5.1
   '@types/node': 17.0.34
   '@typescript-eslint/eslint-plugin': 5.25.0
@@ -19,7 +19,7 @@ specifiers:
   undici: ^5.2.0
 
 dependencies:
-  '@phamleduy04/erela.js': 2.3.23
+  '@phamleduy04/erela.js': 2.3.27
   undici: 5.2.0
 
 devDependencies:
@@ -1588,13 +1588,13 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@phamleduy04/erela.js/2.3.23:
-    resolution: {integrity: sha512-Y3TggzXKdCow0egjZ2bQmgSSoxtZMV3VmLLl9Pi6TX28rdxTENMRkk/23qIXqADpArbcjL/buSfzXwBjciGLMw==}
+  /@phamleduy04/erela.js/2.3.27:
+    resolution: {integrity: sha512-LbFJmbJEHcczKm33kJb1xGwJ5oR0ovCpFzhqeamvfa72vW1jmZn2Rwb0vgZ/z0fTeKL65p4fT8jKNvYD0ATyjA==}
     engines: {node: '>=16.0.0'}
     dependencies:
       '@discordjs/collection': 0.6.0
-      undici: 5.2.0
-      ws: 8.6.0
+      undici: 5.3.0
+      ws: 8.7.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -3958,6 +3958,11 @@ packages:
     engines: {node: '>=12.18'}
     dev: false
 
+  /undici/5.3.0:
+    resolution: {integrity: sha512-8LxC/xmR2GCE4q1heE1sJxVnnf5S6yQ2dObvMFBBWkB8aQlaqNuWovgRFWRMB7KUdLPGZfOTTmUeeLEJYX56iQ==}
+    engines: {node: '>=12.18'}
+    dev: false
+
   /unicode-canonical-property-names-ecmascript/2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
     engines: {node: '>=4'}
@@ -4044,8 +4049,8 @@ packages:
       signal-exit: 3.0.7
     dev: true
 
-  /ws/8.6.0:
-    resolution: {integrity: sha512-AzmM3aH3gk0aX7/rZLYvjdvZooofDu3fFOzGqcSnQ1tOcTWwhM/o+q++E8mAyVVIyUdajrkzWUGftaVSDLn1bw==}
+  /ws/8.7.0:
+    resolution: {integrity: sha512-c2gsP0PRwcLFzUiA8Mkr37/MI7ilIlHQxaEAtd0uNMbVMoy8puJyafRlm0bV9MbGSabUPeLrRRaqIBcFcA2Pqg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
